@@ -107,7 +107,7 @@ const Content = styled.h3`
   margin: 0;
   color: ${props => (props.theme === "light" ? "#323330" : "white")};
   &.inner {
-    margin: 10px 0;
+    margin: 8px 0;
   }
 `;
 
@@ -115,12 +115,14 @@ const SignUpSection = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 `;
 
 const Form = styled.div`
   display: flex;
   align-items: center;
-  border-radius: 2px;
+  /* border-radius: 10px; */
   height: 40px;
   &.button {
     justify-content: center;
@@ -130,15 +132,21 @@ const Form = styled.div`
     min-width: 60px;
     font-weight: 600;
   }
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
 
 const EmailField = styled.input`
   background: white;
   padding-left: 2%;
   color: #323330;
-  width: 75%;
+  /* width: 75%; */
   font-size: 16px;
   &:focus {
     outline: none;
   }
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: none;
 `;
