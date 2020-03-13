@@ -3,16 +3,14 @@ import styled from "styled-components";
 
 import Logo from "../components/Logo";
 
-const InfoSectionm = ({ theme, subscribed, setSubscribed }) => {
+const InfoSection = ({ theme, subscribed, setSubscribed }) => {
   const [email, setEmail] = useState("");
-
-  console.log(email);
 
   return (
     <InfoWrapper theme={theme}>
       <Info>
         <HeaderSection>
-          <Logo />
+          {!subscribed && <Logo />}
           <Header theme={theme}>
             littleBytes<LanguageTag theme={theme}>.JS</LanguageTag>
             {/* Consider lowercase */}
@@ -44,29 +42,33 @@ const InfoSectionm = ({ theme, subscribed, setSubscribed }) => {
             </>
           )}
         </Content>
-        <SignUpSection>
-          <EmailField
-            placeholder="Please enter your email..."
-            type="text"
-            value={email}
-            onChange={event => setEmail(event.target.value)}
-          />
-          <Form onClick={() => setSubscribed(true)} className="button">
-            Sign Up
-          </Form>
-        </SignUpSection>
+        {subscribed ? (
+          <Content theme={theme}>Your first email is on its way!</Content>
+        ) : (
+          <SignUpSection>
+            <EmailField
+              placeholder="Please enter your email..."
+              type="text"
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+            />
+            <Form onClick={() => setSubscribed(true)} className="button">
+              Sign Up
+            </Form>
+          </SignUpSection>
+        )}
       </Info>
     </InfoWrapper>
   );
 };
 
-export default InfoSectionm;
+export default InfoSection;
 
 const InfoWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 55vw;
-  background: ${props => (props.theme === "light" ? "white" : "#323330")};
+  background: ${props => (props.theme === "light" ? "white" : "#262725")};
 `;
 
 const Info = styled.div`
@@ -87,13 +89,13 @@ const HeaderSection = styled.div`
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
-  color: ${props => (props.theme === "light" ? "#323330" : "white")};
+  color: ${props => (props.theme === "light" ? "#262725" : "white")};
 `;
 
 // TESTING THIS ONE OUT
 const LanguageTag = styled.span`
   /* Tiny */
-  color: #323330;
+  color: #262725;
   font-size: 16px;
   font-weight: 800;
 
@@ -105,9 +107,9 @@ const LanguageTag = styled.span`
 
 const Content = styled.h3`
   margin: 0;
-  color: ${props => (props.theme === "light" ? "#323330" : "white")};
+  color: ${props => (props.theme === "light" ? "#262725" : "white")};
   &.inner {
-    margin: 8px 0;
+    margin: 20px 0;
   }
 `;
 
@@ -122,12 +124,11 @@ const SignUpSection = styled.div`
 const Form = styled.div`
   display: flex;
   align-items: center;
-  /* border-radius: 10px; */
   height: 40px;
   &.button {
     justify-content: center;
-    background: #f0db4f;
-    color: #323330;
+    background: #ffe644;
+    color: #262725;
     width: 20%;
     min-width: 60px;
     font-weight: 600;
@@ -139,8 +140,7 @@ const Form = styled.div`
 const EmailField = styled.input`
   background: white;
   padding-left: 2%;
-  color: #323330;
-  /* width: 75%; */
+  color: #262725;
   font-size: 16px;
   &:focus {
     outline: none;

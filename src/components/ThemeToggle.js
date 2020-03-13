@@ -18,7 +18,7 @@ const Button = styled.div`
   bottom: 2%;
   right: 1.2%;
   /* background: ${props => (props.theme === "light" ? "#323330" : "white")}; */
-  background: #f0db4f;
+  background: #ffe644;
   border: 1px solid #ffffff50;
   cursor: pointer
 `;

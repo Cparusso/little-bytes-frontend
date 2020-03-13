@@ -64,11 +64,11 @@ const IssueInfo = styled.div`
   flex-direction: column;
   height: 90%;
   width: 17%;
-  background: #f0db4f;
+  background: #ffe644;
   align-items: center;
   justify-content: center;
   border: 2px solid #323330;
-  border-radius: 2px;
+  border-radius: 10px;
 `;
 
 const IssueInfoRight = styled.h1`

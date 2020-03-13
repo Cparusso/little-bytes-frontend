@@ -24,7 +24,7 @@ const DemoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0db4f;
+  background: #ffe644;
   width: 45vw;
 `;
 
@@ -39,7 +39,7 @@ const Phone = styled.div`
   width: 300px;
   border-radius: 3em;
   &.case {
-    background: #323330;
+    background: #262725;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
   }
 `;
@@ -52,7 +52,7 @@ const Notch = styled.div`
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   &.case {
-    background: #323330;
+    background: #262725;
   }
 `;
 
@@ -81,7 +81,7 @@ const PhoneButton = styled.div`
     border-bottom-right-radius: 1em;
   }
   &.case {
-    background: #323330;
+    background: #262725;
     z-index: 0;
   }
 `;

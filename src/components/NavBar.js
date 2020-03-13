@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../components/Logo";
 
 const NavBar = ({ theme }) => {
   return (
     <Nav>
       <LeftSide>
-        {/* <Logo /> */}
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Logo />
           <Header>
-            littleBytes<LanguageTag>.JS</LanguageTag>
+            {/* littleBytes<LanguageTag>.JS</LanguageTag> */}
             {/* Consider lowercase */}
             {/* Consider removing the logo in lieu of adding styling to this */}
             {/* Play around with the styled component below */}
@@ -41,11 +42,11 @@ export default NavBar;
 
 const Nav = styled.div`
   height: 8vh;
-  background: #323330;
+  background: #262725;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 95px 0 55px;
+  padding: 10px 95px 10px 55px;
   color: white;
 `;
 

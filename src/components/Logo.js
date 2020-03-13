@@ -13,7 +13,7 @@ const LogoImage = styled.h2`
   align-items: flex-end;
   justify-content: flex-end;
   color: #323330;
-  background: #f0db4f;
+  background: #ffe644;
   margin: 0;
   height: 55px;
   width: 49px;

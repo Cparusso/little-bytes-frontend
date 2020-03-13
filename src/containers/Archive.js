@@ -52,7 +52,7 @@ const ArchiveWrapper = styled.div`
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  color: #323330;
+  color: #262725;
   width: 100vw;
 `;
 
