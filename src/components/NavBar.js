@@ -81,4 +81,5 @@ const RightSide = styled.div`
   justify-content: space-between;
   width: 30vw;
   font-weight: 600;
+  font-size: 18px;
 `;

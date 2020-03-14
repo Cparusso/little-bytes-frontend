@@ -20,4 +20,8 @@ const LogoImage = styled.h2`
   padding-right: 6px;
   margin-right: 10px;
   border-radius: 4px;
+  /* background: -webkit-linear-gradient(90deg, #fff 45%, #ffe644 45%);
+  background: -o-linear-gradient(90deg, #fff 45%, #ffe644 45%);
+  background: -moz-linear-gradient(90deg, #fff 45%, #ffe644 45%);
+  background: linear-gradient(90deg, #fff 45%, #ffe644 45%); */
 `;
