@@ -10,7 +10,6 @@ const Archive = () => {
     <ArchiveWrapper>
       <HeaderWrapper>
         <Header>Archive</Header>
-        {/* <MagnifyingGlass src="search.svg" /> */}
         <FilterSearch
           placeholder="Filter by title or tags..."
           type="text"
@@ -67,12 +66,7 @@ const HeaderWrapper = styled.div`
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
-  padding: 20px;
-`;
-
-const MagnifyingGlass = styled.img`
-  width: 25px;
-  margin-top: 5px;
+  padding: 10px;
 `;
 
 const FilterSearch = styled.input`
@@ -88,6 +82,7 @@ const FilterSearch = styled.input`
   transition: width 0.4s ease-in-out;
   padding-left: 45px;
   background: url("search.svg") no-repeat;
+  background-size: 32px 32px;
   &:focus {
     width: 17%;
     outline: none;

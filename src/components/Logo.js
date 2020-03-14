@@ -9,7 +9,7 @@ export default Logo;
 
 const LogoImage = styled.h2`
   display: flex;
-  font-size: 28px;
+  font-size: 18px;
   align-items: flex-end;
   justify-content: flex-end;
   color: #323330;
@@ -19,5 +19,5 @@ const LogoImage = styled.h2`
   width: 49px;
   padding-right: 6px;
   margin-right: 10px;
-  border-radius: 2px;
+  border-radius: 5px;
 `;

@@ -46,5 +46,8 @@ export default LandingPage;
 
 const MainWrapper = styled.div`
   display: flex;
-  height: ${props => (props.subscribed ? "92vh" : "100vh")};
+  height: ${props => (props.subscribed ? "89vh" : "100vh")};
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

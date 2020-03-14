@@ -11,8 +11,9 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
       <Info>
         <HeaderSection>
           {!subscribed && <Logo />}
+          {/* <Logo /> */}
           <Header theme={theme}>
-            littleBytes<LanguageTag theme={theme}>.JS</LanguageTag>
+            littleBytes<LanguageTag theme={theme}>. JS</LanguageTag>
             {/* Consider lowercase */}
             {/* Consider removing the logo in lieu of adding styling to this */}
             {/* Play around with the styled component below */}
@@ -69,6 +70,10 @@ const InfoWrapper = styled.div`
   align-items: center;
   width: 55vw;
   background: ${props => (props.theme === "light" ? "white" : "#262725")};
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 900px;
+  }
 `;
 
 const Info = styled.div`
@@ -119,6 +124,11 @@ const SignUpSection = styled.div`
   width: 90%;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    width: 100%;
+  }
 `;
 
 const Form = styled.div`

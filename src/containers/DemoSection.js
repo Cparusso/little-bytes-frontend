@@ -26,10 +26,17 @@ const DemoWrapper = styled.div`
   align-items: center;
   background: #ffe644;
   width: 45vw;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    padding-bottom: 70px;
+  }
 `;
 
 const Phone = styled.div`
-  position: absolute;
+  position: relative;
   background: black;
   display: flex;
   flex-direction: column;
