@@ -67,8 +67,8 @@ const IssueInfo = styled.div`
   background: #ffe644;
   align-items: center;
   justify-content: center;
-  border: 2px solid #323330;
-  border-radius: 10px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 `;
 
 const IssueInfoRight = styled.h1`

@@ -19,5 +19,5 @@ const LogoImage = styled.h2`
   width: 49px;
   padding-right: 6px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 4px;
 `;

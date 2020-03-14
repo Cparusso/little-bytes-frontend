@@ -27,8 +27,9 @@ const About = () => {
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <p>o</p>
-                <p>o</p>
+                <img src="linkedin.svg" height="25px" />
+                <img src="github.svg" height="25px" />
+                <img src="mail.svg" height="25px" />
               </EmployeeLinks>
             </EmployeeInfo>
             {/* <EmployeeDesc>
@@ -46,8 +47,9 @@ const About = () => {
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <p>o</p>
-                <p>o</p>
+                <img src="linkedin.svg" height="25px" />
+                <img src="github.svg" height="25px" />
+                <img src="mail.svg" height="25px" />
               </EmployeeLinks>
             </EmployeeInfo>
             {/* <EmployeeDesc>
@@ -63,8 +65,9 @@ const About = () => {
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <p>o</p>
-                <p>o</p>
+                <img src="linkedin.svg" height="25px" />
+                <img src="github.svg" height="25px" />
+                <img src="mail.svg" height="25px" />
               </EmployeeLinks>
             </EmployeeInfo>
 
@@ -116,6 +119,7 @@ const Employees = styled.div`
 
 const CardImage = styled.img`
   width: 200px;
+  border-radius: 4px;
 `;
 
 const Card = styled.div`
@@ -125,22 +129,24 @@ const Card = styled.div`
   width: 250px;
   height: 350px;
   padding: 20px 0px 5px 0px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   background: #ffe644;
 
-  /* background: -webkit-linear-gradient(90deg, #fff 70%, #ffe644 70%);
+  /* without grey */
+  background: -webkit-linear-gradient(90deg, #fff 70%, #ffe644 70%);
   background: -o-linear-gradient(90deg, #fff 70%, #ffe644 70%);
   background: -moz-linear-gradient(90deg, #fff 70%, #ffe644 70%);
-  background: linear-gradient(90deg, #fff 70%, #ffe644 70%); */
-  /* 
-  background: -webkit-linear-gradient(180deg, #262725 68%, rgba(0, 0, 0, 0) 33%),
+  background: linear-gradient(90deg, #fff 70%, #ffe644 70%);
+
+  /* with grey */
+  /* background: -webkit-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
     -webkit-linear-gradient(90deg, #fff 66%, #ffe644 66%);
-  background: -o-linear-gradient(180deg, #262725 68%, rgba(0, 0, 0, 0) 33%),
+  background: -o-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
     -o-linear-gradient(90deg, #fff 66%, #ffe644 66%);
-  background: -moz-linear-gradient(180deg, #262725 68%, rgba(0, 0, 0, 0) 33%),
+  background: -moz-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
     -moz-linear-gradient(90deg, #fff 66%, #ffe644 66%);
-  background: linear-gradient(180deg, #262725 68%, rgba(0, 0, 0, 0) 33%),
+  background: linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
     linear-gradient(90deg, #fff 66%, #ffe644 66%); */
 `;
 
@@ -153,12 +159,14 @@ const EmployeeInfo = styled.div`
 const Employee = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
+  height: 100%;
+  padding-top: 30px;
 `;
 
 const EmployeeName = styled.h1`
   margin-bottom: 0;
   width: 70%;
+  margin: 0;
 `;
 
 const Position = styled.h4`
@@ -166,8 +174,11 @@ const Position = styled.h4`
 `;
 
 const EmployeeLinks = styled.div`
-  margin-bottom: 0;
   width: 20%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 // const EmployeeDesc = styled.p`
