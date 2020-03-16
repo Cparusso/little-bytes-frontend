@@ -20,16 +20,16 @@ const About = () => {
         <SectionHeader>Meet The Team</SectionHeader>
         <Employees>
           <Card>
-            <CardImage src="me.png" />
+            <CardImage src="me.png" alt="employee headshot" />
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Charlie Russo</EmployeeName>
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <img src="linkedin.svg" height="25px" />
-                <img src="github.svg" height="25px" />
-                <img src="mail.svg" height="25px" />
+                <img src="linkedin.svg" height="25px" alt="linkedin" />
+                <img src="github.svg" height="25px" alt="github" />
+                <img src="mail.svg" height="25px" alt="email" />
               </EmployeeLinks>
             </EmployeeInfo>
             {/* <EmployeeDesc>
@@ -40,16 +40,16 @@ const About = () => {
             </EmployeeDesc> */}
           </Card>
           <Card>
-            <CardImage src="me.png" />
+            <CardImage src="me.png" alt="employee headshot" />
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Mike Schwartz</EmployeeName>
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <img src="linkedin.svg" height="25px" />
-                <img src="github.svg" height="25px" />
-                <img src="mail.svg" height="25px" />
+                <img src="linkedin.svg" height="25px" alt="linkedin" />
+                <img src="github.svg" height="25px" alt="github" />
+                <img src="mail.svg" height="25px" alt="email" />
               </EmployeeLinks>
             </EmployeeInfo>
             {/* <EmployeeDesc>
@@ -58,16 +58,16 @@ const About = () => {
             </EmployeeDesc> */}
           </Card>
           <Card>
-            <CardImage src="me.png" />
+            <CardImage src="me.png" alt="employee headshot" />
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Miriam Frank</EmployeeName>
                 <Position>Co-Founder</Position>
               </Employee>
               <EmployeeLinks>
-                <img src="linkedin.svg" height="25px" />
-                <img src="github.svg" height="25px" />
-                <img src="mail.svg" height="25px" />
+                <img src="linkedin.svg" height="25px" alt="linkedin" />
+                <img src="github.svg" height="25px" alt="github" />
+                <img src="mail.svg" height="25px" alt="email" />
               </EmployeeLinks>
             </EmployeeInfo>
 
@@ -99,15 +99,9 @@ const Section = styled.div`
 
 const SectionHeader = styled.h1`
   font-size: 50px;
-`;
-
-const CompanyPhoto = styled.img`
-  width: 600px;
-  height: 300px;
-`;
-
-const CompanyDesc = styled.h4`
-  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin: 0;
 `;
 
 const Employees = styled.div`
@@ -115,6 +109,9 @@ const Employees = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const CardImage = styled.img`
@@ -131,23 +128,27 @@ const Card = styled.div`
   padding: 20px 0px 5px 0px;
   box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
-  background: #ffe644;
+  /* background: #ffe644; */
+  background: #fff;
 
   /* without grey */
-  background: -webkit-linear-gradient(90deg, #fff 70%, #ffe644 70%);
+  /* background: -webkit-linear-gradient(90deg, #fff 70%, #ffe644 70%);
   background: -o-linear-gradient(90deg, #fff 70%, #ffe644 70%);
   background: -moz-linear-gradient(90deg, #fff 70%, #ffe644 70%);
-  background: linear-gradient(90deg, #fff 70%, #ffe644 70%);
+  background: linear-gradient(90deg, #fff 70%, #ffe644 70%); */
 
   /* with grey */
   /* background: -webkit-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
-    -webkit-linear-gradient(90deg, #fff 66%, #ffe644 66%);
+  -webkit-linear-gradient(90deg, #fff 66%, #ffe644 66%);
   background: -o-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
-    -o-linear-gradient(90deg, #fff 66%, #ffe644 66%);
+  -o-linear-gradient(90deg, #fff 66%, #ffe644 66%);
   background: -moz-linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
-    -moz-linear-gradient(90deg, #fff 66%, #ffe644 66%);
+  -moz-linear-gradient(90deg, #fff 66%, #ffe644 66%);
   background: linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
-    linear-gradient(90deg, #fff 66%, #ffe644 66%); */
+  linear-gradient(90deg, #fff 66%, #ffe644 66%); */
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
 `;
 
 const EmployeeInfo = styled.div`
@@ -171,6 +172,12 @@ const EmployeeName = styled.h1`
 
 const Position = styled.h4`
   margin: 0;
+  padding: 5px;
+  background: #ffe644;
+  border-radius: 4px;
+  width: 55%;
+  font-style: italic;
+  font-weight: 400;
 `;
 
 const EmployeeLinks = styled.div`

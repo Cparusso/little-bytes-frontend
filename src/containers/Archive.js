@@ -53,6 +53,7 @@ const ArchiveWrapper = styled.div`
   align-items: center;
   color: #262725;
   width: 100vw;
+  position: relative;
 `;
 
 const HeaderWrapper = styled.div`
@@ -60,7 +61,6 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-shadow: 0px 3px 8px -4px rgba(0, 0, 0, 0.8);
 `;
 
 const Header = styled.h1`
@@ -86,6 +86,9 @@ const FilterSearch = styled.input`
   &:focus {
     width: 17%;
     outline: none;
+    @media (max-width: 768px) {
+      width: 10%;
+    }
   }
 `;
 

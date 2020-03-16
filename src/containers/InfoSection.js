@@ -21,7 +21,7 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
         </HeaderSection>
         <Content>
           {subscribed ? (
-            <>
+            <div>
               <Content theme={theme} className="inner">
                 Thanks for subscribing - Your mornings just got a little byter!
               </Content>
@@ -29,7 +29,7 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
                 We're looking forward to helping you get started on your journey
                 to learn how to code with javascript.
               </Content>
-            </>
+            </div>
           ) : (
             <>
               <Content theme={theme} className="inner">
@@ -71,8 +71,9 @@ const InfoWrapper = styled.div`
   width: 55vw;
   background: ${props => (props.theme === "light" ? "white" : "#262725")};
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     height: 900px;
+    justify-content: center;
   }
 `;
 
