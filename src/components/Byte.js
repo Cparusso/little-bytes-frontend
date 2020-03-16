@@ -5,9 +5,7 @@ const Byte = ({ cta, issueNum, date }) => {
   return (
     <ByteWrapper>
       <ContentWrapper>
-        <CallToAction>
-          <h2>{cta}</h2>
-        </CallToAction>
+        <CallToAction>{cta}</CallToAction>
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -28,27 +26,17 @@ export default Byte;
 
 const ByteWrapper = styled.div`
   display: flex;
-  height: 30%;
-  width: 65vw;
-  border-radius: 2px;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 2px solid #32333020;
+  width: 65%;
+  border-radius: 6px;
   padding: 30px;
-  box-shadow: 0px 3px 8px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
   align-items: center;
   justify-content: space-around;
-  z-index: -1;
-`;
-
-const CallToAction = styled.div`
-  margin: 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
   @media (max-width: 768px) {
-    height: 70%;
-    border-bottom: 3px solid #262725;
+    width: 80%;
+    height: 100px;
+    padding-top: 10px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -57,8 +45,20 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   width: 60%;
   @media (max-width: 768px) {
-    height: 150px;
-    justify-content: center;
+    height: 80px;
+    width: 55%;
+    border-bottom: 3px solid #262725;
+  }
+`;
+
+const CallToAction = styled.h2`
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    align-items: baseline;
+    font-size: 18px;
   }
 `;
 
@@ -66,7 +66,6 @@ const Content = styled.p`
   margin: 0;
   height: 100px;
   @media (max-width: 768px) {
-    overflow: scroll;
     display: none;
   }
 `;
@@ -82,9 +81,9 @@ const IssueInfo = styled.div`
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   @media (max-width: 768px) {
-    /* background: #fff; */
+    height: 90px;
+    width: 70px;
     padding: 0 10px;
-    /* box-shadow: none; */
   }
 `;
 

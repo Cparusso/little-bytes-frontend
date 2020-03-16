@@ -87,6 +87,7 @@ const RightSide = styled.div`
   font-weight: 600;
   font-size: 18px;
   @media (max-width: 768px) {
-    width: 60%;
+    width: 100%;
+    font-size: 14px;
   }
 `;

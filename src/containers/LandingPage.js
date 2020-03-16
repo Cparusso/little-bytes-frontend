@@ -49,5 +49,6 @@ const MainWrapper = styled.div`
   height: ${props => (props.subscribed ? "89vh" : "100vh")};
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
 `;

@@ -49,11 +49,9 @@ export default Archive;
 const ArchiveWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   color: #262725;
   width: 100vw;
-  position: relative;
 `;
 
 const HeaderWrapper = styled.div`
@@ -61,12 +59,17 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media (max-width: 768px) {
+  }
 `;
 
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
   padding: 10px;
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const FilterSearch = styled.input`
@@ -83,11 +86,14 @@ const FilterSearch = styled.input`
   padding-left: 45px;
   background: url("search.svg") no-repeat;
   background-size: 32px 32px;
+  @media (max-width: 768px) {
+    background-size: 24px 38px;
+  }
   &:focus {
     width: 17%;
     outline: none;
     @media (max-width: 768px) {
-      width: 10%;
+      width: 15%;
     }
   }
 `;
@@ -96,7 +102,6 @@ const BytesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 92vh;
   overflow: scroll;
   width: 100vw;
 `;

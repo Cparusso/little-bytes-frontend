@@ -102,6 +102,10 @@ const SectionHeader = styled.h1`
   padding-top: 10px;
   padding-bottom: 40px;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 36px;
+    padding-bottom: 15px;
+  }
 `;
 
 const Employees = styled.div`
@@ -147,7 +151,7 @@ const Card = styled.div`
   background: linear-gradient(180deg, #262725 50%, rgba(0, 0, 0, 0) 50%),
   linear-gradient(90deg, #fff 66%, #ffe644 66%); */
   @media (max-width: 768px) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -155,6 +159,9 @@ const EmployeeInfo = styled.div`
   display: flex;
   align-items: center;
   width: 80%;
+  @media (max-width: 768px) {
+    height: 140px;
+  }
 `;
 
 const Employee = styled.div`
@@ -186,6 +193,9 @@ const EmployeeLinks = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    padding-top: 5px;
+  }
 `;
 
 // const EmployeeDesc = styled.p`

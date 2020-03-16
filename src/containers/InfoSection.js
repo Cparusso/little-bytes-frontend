@@ -19,7 +19,7 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
             {/* Play around with the styled component below */}
           </Header>
         </HeaderSection>
-        <Content>
+        <div>
           {subscribed ? (
             <div>
               <Content theme={theme} className="inner">
@@ -42,7 +42,7 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
               </Content>
             </>
           )}
-        </Content>
+        </div>
         {subscribed ? (
           <Content theme={theme}>Your first email is on its way!</Content>
         ) : (
@@ -71,8 +71,8 @@ const InfoWrapper = styled.div`
   width: 55vw;
   background: ${props => (props.theme === "light" ? "white" : "#262725")};
   @media (max-width: 768px) {
-    width: 90%;
-    height: 900px;
+    width: 100%;
+    height: 400px;
     justify-content: center;
   }
 `;
@@ -84,18 +84,23 @@ const Info = styled.div`
   flex-direction: column;
   margin-top: -4%;
   width: 75%;
-  height: 50%;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const HeaderSection = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
 `;
 
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
   color: ${props => (props.theme === "light" ? "#262725" : "white")};
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 // TESTING THIS ONE OUT
@@ -127,7 +132,7 @@ const SignUpSection = styled.div`
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
   }
 `;
@@ -159,5 +164,7 @@ const EmailField = styled.input`
   width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   border: none;
 `;

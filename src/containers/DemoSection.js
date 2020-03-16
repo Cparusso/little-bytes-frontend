@@ -29,9 +29,9 @@ const DemoWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 600px;
     background: #fff;
-    padding-bottom: 70px;
+    height: 500px;
+    margin-bottom: 50px;
   }
 `;
 
