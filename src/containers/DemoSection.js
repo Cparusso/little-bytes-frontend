@@ -4,11 +4,11 @@ import styled from "styled-components";
 const DemoSection = () => {
   return (
     <DemoWrapper>
-      <Phone>
-        <Notch />
-        <PhoneButton className="left top" />
-        <PhoneButton className="left bottom" />
-        <PhoneButton className="right" />
+      <Phone className="case">
+        <Notch className="case" />
+        <PhoneButton className="left top case" />
+        <PhoneButton className="left bottom case" />
+        <PhoneButton className="right case" />
         <PhoneScreen>
           <EmailScreen className="top" src="gmail-top.JPG" />
           <EmailScreen className="bottom" src="gmail-content.JPG" />
@@ -24,12 +24,19 @@ const DemoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0db4f;
+  background: #ffe644;
   width: 45vw;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    background: #fff;
+    height: 500px;
+    margin-bottom: 50px;
+  }
 `;
 
 const Phone = styled.div`
-  position: absolute;
+  position: relative;
   background: black;
   display: flex;
   flex-direction: column;
@@ -38,21 +45,27 @@ const Phone = styled.div`
   height: 550px;
   width: 300px;
   border-radius: 3em;
+  &.case {
+    background: #262725;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+  }
 `;
 
 const Notch = styled.div`
   width: 50%;
-  height: 20px;
+  height: 22px;
   background: black;
   z-index: 1;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
+  &.case {
+    background: #262725;
+  }
 `;
 
 const PhoneButton = styled.div`
   position: absolute;
   background: black;
-  /* z-index: 1; */
   &.left {
     width: 20px;
     height: 60px;
@@ -68,11 +81,15 @@ const PhoneButton = styled.div`
   }
   &.right {
     width: 20px;
-    height: 90px;
+    height: 100px;
     right: -2px;
     top: 135px;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
+  }
+  &.case {
+    background: #262725;
+    z-index: 0;
   }
 `;
 

@@ -10,7 +10,6 @@ const Archive = () => {
     <ArchiveWrapper>
       <HeaderWrapper>
         <Header>Archive</Header>
-        {/* <MagnifyingGlass src="search.svg" /> */}
         <FilterSearch
           placeholder="Filter by title or tags..."
           type="text"
@@ -50,9 +49,8 @@ export default Archive;
 const ArchiveWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  color: #323330;
+  color: #262725;
   width: 100vw;
 `;
 
@@ -61,18 +59,17 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-shadow: 0px 3px 8px -4px rgba(0, 0, 0, 0.8);
+  @media (max-width: 768px) {
+  }
 `;
 
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
-  padding: 20px;
-`;
-
-const MagnifyingGlass = styled.img`
-  width: 25px;
-  margin-top: 5px;
+  padding: 10px;
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const FilterSearch = styled.input`
@@ -88,9 +85,16 @@ const FilterSearch = styled.input`
   transition: width 0.4s ease-in-out;
   padding-left: 45px;
   background: url("search.svg") no-repeat;
+  background-size: 32px 32px;
+  @media (max-width: 768px) {
+    background-size: 24px 38px;
+  }
   &:focus {
     width: 17%;
     outline: none;
+    @media (max-width: 768px) {
+      width: 15%;
+    }
   }
 `;
 
@@ -98,7 +102,6 @@ const BytesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 92vh;
   overflow: scroll;
   width: 100vw;
 `;

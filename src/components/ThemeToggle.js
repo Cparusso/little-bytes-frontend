@@ -8,7 +8,7 @@ const ThemeToggle = ({ theme, toggleTheme }) => {
 export default ThemeToggle;
 
 const Button = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: 30px;
@@ -16,9 +16,9 @@ const Button = styled.div`
   border-radius: 100px;
   position: fixed;
   bottom: 2%;
-  right: 1.2%;
+  right: 1.2%; */
   /* background: ${props => (props.theme === "light" ? "#323330" : "white")}; */
-  background: #f0db4f;
+  /* background: #ffe644;
   border: 1px solid #ffffff50;
-  cursor: pointer
+  cursor: pointer */
 `;
