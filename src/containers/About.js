@@ -20,7 +20,9 @@ const About = () => {
         <SectionHeader>Meet The Team</SectionHeader>
         <Employees>
           <Card>
-            <CardImage src="me.png" alt="employee headshot" />
+            <PictureFrame>
+              <CardImage src="me.png" alt="employee headshot" />
+            </PictureFrame>
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Charlie Russo</EmployeeName>
@@ -40,7 +42,10 @@ const About = () => {
             </EmployeeDesc> */}
           </Card>
           <Card>
-            <CardImage src="me.png" alt="employee headshot" />
+            <PictureFrame>
+              <CardImage src="me.png" alt="employee headshot" />
+            </PictureFrame>
+
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Mike Schwartz</EmployeeName>
@@ -58,7 +63,9 @@ const About = () => {
             </EmployeeDesc> */}
           </Card>
           <Card>
-            <CardImage src="me.png" alt="employee headshot" />
+            <PictureFrame>
+              <CardImage src="miriam.png" alt="employee headshot" />
+            </PictureFrame>
             <EmployeeInfo>
               <Employee>
                 <EmployeeName>Miriam Frank</EmployeeName>
@@ -116,6 +123,12 @@ const Employees = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+`;
+
+const PictureFrame = styled.div`
+  display: flex;
+  align-items: center;
+  height: 300px;
 `;
 
 const CardImage = styled.img`
