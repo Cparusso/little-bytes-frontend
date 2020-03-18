@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import path from "path";
 import { newsletters } from "../assets/newsletter";
 const inlineCss = require("inline-css");
 
 const DownloadNewsletter = ({ newsletter, setNewsletter, color }) => {
-  const [htmlContent, setHtmlContent] = useState("");
   const handleDownload = () => {
     const table = document.getElementById("newsletter").outerHTML;
     const options = { url: " " };
     var html = `<style>
                 table {
-                  font-family: monospace;
-                  padding: 20px 0
+                  padding: 20px 0;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: #2d2d2d;
                 }
                 h1,
                 h2,
@@ -20,35 +19,42 @@ const DownloadNewsletter = ({ newsletter, setNewsletter, color }) => {
                 h4,
                 h5,
                 h6,
-                pre {
+                pre,
+                strong {
                   margin: 10px 0;
                   padding: 0;
-                  color: ${color};
-                }
-                h2 {
-                  margin: 0;
                 }
                 p {
                   margin-bottom: 10px;
-                  line-height: 20px;
-                  font-size: 16px;
+                  line-height: 22px;
+                  font-size: 14px;
                 }
-                pre {
-                  white-space: pre-line;
+                h1 {
+                  font-size: 26px;
+                }
+                code {
+                  display: block;
+                  color: ${color};
+                  margin: 0;
+                  padding: 0;
                 }
                 .body {
                   border-radius: 2px;
                 }
                 .body-row-quiz {
                   background: #2d2d2d;
+                  font-family: monospace;
                 }
                 .body-row-quiz td {
                   padding: 20px;
+                  border-radius: 2px;
                 }
                 .body-row-quiz p {
-                  color: #999999;
+                  color: #fff;
+                  line-height: 22px;
+                  font-size: 16px;
                 }
-                strong {
+                .body-row-quiz strong {
                   color: ${color};
                 }
                 .footer {
@@ -56,10 +62,23 @@ const DownloadNewsletter = ({ newsletter, setNewsletter, color }) => {
                 }
                 .footer p {
                   margin: 10px 0;
-                  font-size: 12px;
+                  font-size: 10px;
                 }
                 .header p {
                   text-align: left;
+                  line-height: 30px;
+                }
+                .header img {
+                  width: 45px;
+                  margin-bottom: -5px;
+                }
+                .header h3 {
+                  background: #2d2d2d;
+                  font-family: monospace;
+                  padding: 5px;
+                  width: 200px;
+                  border-radius: 2px;
+                  color: ${color};
                 }
                 .grey-divider {
                   height: 5px;
@@ -71,14 +90,10 @@ const DownloadNewsletter = ({ newsletter, setNewsletter, color }) => {
 
     inlineCss(html, options).then(function(html) {
       const htmlFileText = newsletters(html);
-      const blob = new Blob([htmlFileText], {
-        name: "newsletter",
-        type: "text/html"
-      });
+      console.log(htmlFileText);
       const file = new File([htmlFileText], "newsletter.html", {
         type: "text/html"
       });
-      console.log(file);
       var a = document.createElement("a");
       document.body.appendChild(a);
       a.style = "display: none";

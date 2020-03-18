@@ -13,7 +13,7 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
           {!subscribed && <Logo />}
           {/* <Logo /> */}
           <Header theme={theme}>
-            littleBytes<LanguageTag theme={theme}>. JS</LanguageTag>
+            LittleBytes<LanguageTag theme={theme}>. JS</LanguageTag>
             {/* Consider lowercase */}
             {/* Consider removing the logo in lieu of adding styling to this */}
             {/* Play around with the styled component below */}
@@ -32,13 +32,13 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
             </div>
           ) : (
             <>
-              <Content theme={theme} className="inner">
-                A byte-sized daily dose of JavaScript sent directly to your
-                email
+              <Content theme={theme} className="inner other">
+                Mastering Javascript can be hard — take{" "}
+                <span>Little Bytes</span> at a time.
               </Content>
               <Content theme={theme} className="inner">
-                The easist way to learn the fundamentals of JavaScript on your
-                morning commute
+                Finally, a daily Javascript newsletter filled with top-notch
+                morning reads and need-to-know JS fundamentals.
               </Content>
             </>
           )}
@@ -122,6 +122,18 @@ const Content = styled.h3`
   &.inner {
     margin: 20px 0;
   }
+  &.other {
+    background: #2d2d2d;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 2px;
+
+    /* text-transform: uppercase; */
+  }
+  span {
+    color: #ffe644;
+  }
 `;
 
 const SignUpSection = styled.div`
@@ -148,6 +160,11 @@ const Form = styled.div`
     width: 20%;
     min-width: 60px;
     font-weight: 600;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 20px;
+    cursor: pointer;
   }
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -158,6 +175,7 @@ const EmailField = styled.input`
   padding-left: 2%;
   color: #262725;
   font-size: 16px;
+  padding: 10px;
   &:focus {
     outline: none;
   }

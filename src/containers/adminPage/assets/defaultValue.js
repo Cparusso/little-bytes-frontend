@@ -1,7 +1,9 @@
 export const defaultValue = num => {
   const question = i => `
   <p>Question ${i + 1}: Here is the first Question</p>
-  <pre>hi</pre>
+  <p><code>function shuffleArray() {</code></p>
+  <p><code>hi</code></p>
+  <code>}</code>
   <p>A =></p>
   <p>B =></p>
   <p>C =></p>
@@ -28,9 +30,8 @@ export const defaultValue = num => {
   ----Header----
   <br>
   ----Body----
-  <br>
-  ----Quiz----
   <h2><strong>Daily Quiz</strong></h2>
+  ----Quiz----
  ${quiz}
   ----Quiz----
   <br>
@@ -43,17 +44,8 @@ export const defaultValue = num => {
   <p><strong>🧠 LEARN:</strong> Here is some text to add a link to. And here is anothere sentence about that link.</p>
   <p><strong>🧠 LEARN:</strong> Here is some text to add a link to. And here is anothere sentence about that link.</p>
   ----Links----
-  <br>
-  ----Community----
-  <h2><strong>SoundBytes</strong></h2>
-  <p><strong>💼 JOB OF THE DAY:</strong> Here is some text to add a link to</p>
-  <p><strong>✏️ COURSE OF THE DAY:</strong> Here is some text to add a link to</p>
-  <p><strong>📚 LIBRARY OF THE DAY:</strong> Here is some text to add a link to</p>
-  <p><strong>🔨 TIP OF THE DAY:</strong> Here is some text to add a link to</p>
-  ----Community----
-  <br>
-  ----Answers----
   <h2><strong>Quiz Answers</strong></h2>
+  ----Answers----
   ${answers}
   ----Answers----
   <br>

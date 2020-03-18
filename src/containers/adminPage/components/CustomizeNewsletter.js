@@ -22,7 +22,9 @@ const CustomizeNewsletter = ({ numOfQuestions, setNumOfQuestions }) => {
       {showList && (
         <NumbersContainer>
           {options.map(option => (
-            <Number onClick={() => handleNumberChoice(option)}>{option}</Number>
+            <Number key={option} onClick={() => handleNumberChoice(option)}>
+              {option}
+            </Number>
           ))}
         </NumbersContainer>
       )}

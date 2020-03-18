@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { createNewsletter } from "../../../helpers/createNewsletter";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2
-} from "react-html-parser";
-import DownloadNewsletter from "./DownloadNewsletter";
+import ReactHtmlParser from "react-html-parser";
+import logo from "../../../assets/logo.png";
 
 const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
   const organizeHtml = previewHtml.replace(/\s*(-)\s*/g, "$1");
@@ -23,7 +18,10 @@ const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
       <table id="newsletter" width="100%">
         <thead className="header">
           <tr align="center">
-            <td>{ReactHtmlParser(newsletterSections[0])}</td>
+            <td>
+              <img src={logo} alt="logo" />
+              {ReactHtmlParser(newsletterSections[0])}
+            </td>
           </tr>
           <tr align="center">
             <td>
@@ -32,15 +30,10 @@ const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
           </tr>
         </thead>
         <tbody className="body">
-          <tr className="body-row-quiz">
+          <tr>
             <td>{ReactHtmlParser(newsletterSections[1])}</td>
           </tr>
-          <tr align="center">
-            <td>
-              <div className="grey-divider"></div>
-            </td>
-          </tr>
-          <tr className="body-row-links">
+          <tr className="body-row-quiz">
             <td>{ReactHtmlParser(newsletterSections[2])}</td>
           </tr>
           <tr align="center">
@@ -56,8 +49,11 @@ const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
               <div className="grey-divider"></div>
             </td>
           </tr>
-          <tr className="body-row-quiz">
+          <tr>
             <td>{ReactHtmlParser(newsletterSections[4])}</td>
+          </tr>
+          <tr className="body-row-quiz">
+            <td>{ReactHtmlParser(newsletterSections[5])}</td>
           </tr>
         </tbody>
         <tfoot className="footer">
@@ -67,7 +63,7 @@ const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
             </td>
           </tr>
           <tr align="center">
-            <td>{ReactHtmlParser(newsletterSections[5])}</td>
+            <td>{ReactHtmlParser(newsletterSections[6])}</td>
           </tr>
         </tfoot>
       </table>
@@ -82,11 +78,6 @@ const NewsletterPreview = ({ previewHtml, color, newsletterRef }) => {
 
 export default NewsletterPreview;
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const NewsletterContainer = styled.div`
   width: 100%;
   padding: 0 20px;
@@ -95,8 +86,9 @@ const NewsletterContainer = styled.div`
 
 const Newsletter = styled.div`
   table {
-    font-family: monospace;
     padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2d2d2d;
   }
   h1,
   h2,
@@ -104,49 +96,57 @@ const Newsletter = styled.div`
   h4,
   h5,
   h6,
-  pre {
+  strong {
     margin: 10px 0;
     padding: 0;
-    color: ${props => props.color};
+  }
+  h1 {
+    font-size: 26px;
   }
   p {
-    margin-bottom: 10px;
-    line-height: 20px;
-    font-size: 16px;
-  }
-  pre {
-    white-space: pre-line;
-  }
-  .body {
-    border-radius: 2px;
-  }
-  .body-row-quiz {
-    background: #2d2d2d;
-  }
-  .body-row-quiz td {
-    padding: 20px;
-  }
-  .body-row-quiz p {
-    color: #999999;
-  }
-  /* .body-row-links {
-    background: #e8e8e8;
-  } */
-  /* .body-row-links td {
-    padding: 20px;
-  } */
-  strong {
-    color: ${props => props.color};
-  }
-  .footer {
-    font-size: 10px;
-  }
-  .footer p {
-    margin: 10px 0;
+    line-height: 22px;
     font-size: 14px;
+  }
+  code {
+    display: block;
+    color: ${props => props.color};
+    margin: 0;
+    padding: 0;
   }
   .header p {
     text-align: left;
+    line-height: 30px;
+  }
+  .header img {
+    width: 45px;
+    margin-bottom: -5px;
+  }
+  .header h3 {
+    background: #2d2d2d;
+    font-family: monospace;
+    padding: 5px;
+    width: 200px;
+    border-radius: 2px;
+    color: ${props => props.color};
+  }
+  .body-row-quiz {
+    background: #2d2d2d;
+    font-family: monospace;
+  }
+  .body-row-quiz td {
+    padding: 20px;
+    border-radius: 2px;
+  }
+  .body-row-quiz p {
+    color: #fff;
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .body-row-quiz strong {
+    color: ${props => props.color};
+  }
+  .footer p {
+    font-size: 10px;
   }
   .grey-divider {
     height: 5px;
