@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-
 import LandingPage from "./containers/LandingPage";
+import AdminPage from "./containers/adminPage/AdminPage";
 import NavBar from "./components/NavBar";
+import { Route } from "react-router-dom";
 
 function App() {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <Router>
-      {subscribed && <NavBar />}
-      <LandingPage subscribed={subscribed} setSubscribed={setSubscribed} />
-    </Router>
+    <>
+      <Route exact path={"/"} component={LandingPage} />
+      <Route path="/admin" component={AdminPage} />
+      {/* {subscribed && <NavBar />} */}
+      {/* <LandingPage subscribed={subscribed} setSubscribed={setSubscribed} /> */}
+    </>
   );
 }
 
