@@ -128,7 +128,7 @@ const Employees = styled.div`
 const PictureFrame = styled.div`
   display: flex;
   align-items: center;
-  height: 300px;
+  height: 250px;
 `;
 
 const CardImage = styled.img`
@@ -172,6 +172,7 @@ const EmployeeInfo = styled.div`
   display: flex;
   align-items: center;
   width: 80%;
+  padding: 20px 0 12px 0;
   @media (max-width: 768px) {
     height: 140px;
   }
@@ -181,7 +182,6 @@ const Employee = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 30px;
 `;
 
 const EmployeeName = styled.h1`

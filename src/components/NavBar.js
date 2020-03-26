@@ -3,19 +3,20 @@ import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../components/Logo";
 
-const NavBar = ({ theme }) => {
+const NavBar = () => {
   return (
     <Nav>
       <LeftSide>
-        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-          <Logo />
-          <Header>
-            {/* littleBytes<LanguageTag>.JS</LanguageTag> */}
-            {/* Consider lowercase */}
-            {/* Consider removing the logo in lieu of adding styling to this */}
-            {/* Play around with the styled component below */}
-          </Header>
-        </Link>
+        <ClickableLogo>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <Logo nav={true} />
+          </Link>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <Header>
+              LittleBytes<LanguageTag>.JS</LanguageTag>
+            </Header>
+          </Link>
+        </ClickableLogo>
       </LeftSide>
       <RightSide>
         <NavLink
@@ -62,30 +63,37 @@ const LeftSide = styled.div`
 `;
 
 const Header = styled.h1`
-  font-size: 32px;
+  font-size: 40px;
   margin: 0;
+  margin-left: 6px;
+  margin-bottom: -2px;
   color: ${props => (props.theme === "light" ? "#323330" : "white")};
 `;
 
 // TESTING THIS ONE OUT
-// const LanguageTag = styled.span`
-/* Tiny */
-/* color: #323330; */
-// font-size: 16px;
-// font-weight: 800;
+const LanguageTag = styled.span`
+  /* Tiny */
+  /* color: #323330; */
+  font-size: 16px;
+  font-weight: 800;
 
-/* Yellow */
-/* color: #f0db4f;
+  /* Yellow */
+  /* color: #f0db4f;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #323330; */
-// `;
+`;
+
+const ClickableLogo = styled.span`
+  display: flex;
+  align-items: flex-end;
+`;
 
 const RightSide = styled.div`
   display: flex;
   justify-content: space-between;
   width: 30vw;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   @media (max-width: 768px) {
     width: 100%;
     font-size: 14px;

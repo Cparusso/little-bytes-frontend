@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>
-      <Route exact path={"/"} component={LandingPage} />
+      {/* <Route exact path={"/"} component={LandingPage} /> */}
       <Route path="/admin" component={AdminPage} />
-      {/* {subscribed && <NavBar />} */}
-      {/* <LandingPage subscribed={subscribed} setSubscribed={setSubscribed} /> */}
+      {subscribed && <NavBar />}
+      <LandingPage subscribed={subscribed} setSubscribed={setSubscribed} />
     </>
   );
 }

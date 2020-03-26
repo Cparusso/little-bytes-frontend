@@ -10,8 +10,8 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
     <InfoWrapper theme={theme}>
       <Info>
         <HeaderSection>
-          {!subscribed && <Logo />}
-          {/* <Logo /> */}
+          {/* {!subscribed && <Logo />} */}
+          <Logo />
           <Header theme={theme}>
             LittleBytes<LanguageTag theme={theme}>. JS</LanguageTag>
             {/* Consider lowercase */}
@@ -33,8 +33,8 @@ const InfoSection = ({ theme, subscribed, setSubscribed }) => {
           ) : (
             <>
               <Content theme={theme} className="inner other">
-                Mastering Javascript can be hard — take{" "}
-                <span>Little Bytes</span> at a time.
+                Mastering Javascript can be hard — take it one{" "}
+                <span>Little Byte</span> at a time.
               </Content>
               <Content theme={theme} className="inner">
                 Finally, a daily Javascript newsletter filled with top-notch
@@ -91,12 +91,15 @@ const Info = styled.div`
 
 const HeaderSection = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
+  margin-bottom: 15px;
 `;
 
 const Header = styled.h1`
   font-size: 50px;
   margin: 0;
+  margin-left: 10px;
+  margin-bottom: -7px;
   color: ${props => (props.theme === "light" ? "#262725" : "white")};
   @media (max-width: 768px) {
     font-size: 36px;
@@ -142,6 +145,7 @@ const SignUpSection = styled.div`
   width: 90%;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  margin-top: 15px;
 
   @media (max-width: 768px) {
     font-size: 12px;
@@ -152,7 +156,7 @@ const SignUpSection = styled.div`
 const Form = styled.div`
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 25px;
   &.button {
     justify-content: center;
     background: #ffe644;
@@ -163,7 +167,7 @@ const Form = styled.div`
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
   }
   border-top-right-radius: 8px;

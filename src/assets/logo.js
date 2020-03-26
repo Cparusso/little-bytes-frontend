@@ -41,11 +41,11 @@ export const logo = (
         <text
           transform="matrix(1,0,0,1,839,410.479)"
           style={{
-            fontFamily: "monospace",
+            fontFamily: "'Karla', sans-serif;",
             fontWeight: 700,
             fontSize: "36px",
             fontStyle: "normal",
-            fill: "#000000",
+            fill: "#262725",
             stroke: "none"
           }}
         >
